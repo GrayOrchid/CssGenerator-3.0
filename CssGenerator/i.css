@@ -211,7 +211,7 @@ input[type=range] {
   background-color:rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(20px);
   z-index: 100000;
-  transition: 1s;
+  transition: .2s;
   transform: translateX(-100%);
   width: 100%;
 
