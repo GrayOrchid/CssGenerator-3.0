@@ -212,6 +212,7 @@ input[type=range] {
   z-index: 100000;
   transition: 1s;
   transform: translateX(100%);
+  width: 100%;
 
 }
 
@@ -226,6 +227,7 @@ input[type=range] {
     color: black;
     height: 100%;   
      width: 325px;
+     /* width: 30%; */
     background-color: rgb(252, 252, 252);
 }
 .btb{
