@@ -1,16 +1,12 @@
 //Табы
-
 let tabButton = document.querySelectorAll('.tab-button')
 let tabsItem = document.querySelectorAll('.tabs-item')
-
 
 //Бургер Меню 
 let open = document.querySelector('.open')
 let close = document.querySelector('.close')
 let burgerCont = document.querySelector('.burgerCont')
 let burgerMenu = document.querySelector('.burgerMenu')
-
-
 
 // Результать 
 let $border = document.querySelector('.border')
@@ -20,7 +16,8 @@ let $shadowText = document.querySelector('.shadowText')
 let $TextShadow = document.querySelector('.TextShadow')
 let $shadowBox = document.querySelector('.shadowBox')
 let $transform = document.querySelector('.transform')
-
+let $transition = document.querySelector('.transition')
+let $hoverButton = document.querySelector('.hoverButton')
 // Тест бокс
 let $box = document.querySelector('.box')
 
@@ -39,16 +36,14 @@ open.addEventListener('click', ()=>{
 })
 close.addEventListener('click',()=>{
 	burgerMenu.classList.remove('burgerAcitve')
-
 })
 
-// Функция Табы
+// Функция Табов
 tabButton.forEach(function (e) {
 	e.addEventListener('click', function () {
 		let currentBtn = e
 		let tabId = currentBtn.getAttribute('data-tab')
 		let currentTab = document.querySelector(tabId)
-		console.log(tabId);
 		tabButton.forEach(function (e) {
 			e.classList.remove('btb')
 		})
@@ -79,12 +74,16 @@ reset.addEventListener('click',()=>{
 
 	$box.style.transform =` scale(1) rotate(0deg) translate(0px, 0px) skew(0deg, 0deg)`
 	$transform.textContent = 'transform:'
+
+	$hoverButton.style.transition = '0s'
+	$transition.textContent = 'transition:'
 })
 
 function border(params) {
 	let borderSize = document.querySelector('.borderSize').value
 	let borderType = document.querySelector('.borderType').value
 	let colorBorder = document.querySelector('.colorBorder').value
+	
 	if (borderSize > 50) {
 		borderSize = 50
 	}
@@ -97,6 +96,7 @@ function borderRadius(params) {
 	let rtr = document.querySelector(".rtr").value;
 	let rbr = document.querySelector(".rbr").value;
 	let rbl = document.querySelector(".rbl").value;
+
 	$box.style.borderRadius = `${rtl}px ${rtr}px ${rbr}px ${rbl}px `
 	$borderRadius.textContent = `border-radius:${rtl}px ${rtr}px ${rbr}px ${rbl}px; `
 }
@@ -106,9 +106,9 @@ function textShadow(params) {
 	let ShadowTextY = document.querySelector('.ShadowTextY').value
 	let ShadowTextBlur = document.querySelector('.ShadowTextBlur').value
 	let ShadowTextColor = document.querySelector('.ShadowTextColor').value
+
 	$TextShadow.style.textShadow = `${ShadowTextX}px ${ShadowTextY}px ${ShadowTextBlur}px ${ShadowTextColor}`
 	$shadowText.textContent = `text-shadow: ${ShadowTextX}px ${ShadowTextY}px ${ShadowTextBlur}px ${ShadowTextColor} `
-
 }
 
 function boxShadow(params) {
@@ -117,6 +117,7 @@ function boxShadow(params) {
 	let ShadowBoxBlur = document.querySelector('.ShadowBoxBlur').value
 	let ShadowBoxColor = document.querySelector('.ShadowBoxColor').value
 	let boxShadowType = document.querySelector('.boxShadowType').value
+
 	$box.style.boxShadow = ` ${boxShadowType} ${ShadowBoxX}px ${ShadowBoxY}px ${ShadowBoxBlur}px ${ShadowBoxColor } `
 	$shadowBox.textContent = `box-shadow: ${boxShadowType}  ${ShadowBoxX}px ${ShadowBoxY}px ${ShadowBoxBlur}px ${ShadowBoxColor } `
 }
@@ -130,6 +131,7 @@ function gradient(params) {
 	let gradientThirdColor = document.querySelector('.gradientThirdColor').value
 	let gradientThirdPoint = document.querySelector('.gradientThirdPoint').value
 	let gradientType = document.querySelector('.gradientType').value
+
 	if (gradientType === 'radial') {
 		$box.style.background = `radial-gradient(circle, ${gradientFirstColor} ${gradientFirstPoint}%, ${gradientSecondColor} ${gradientSecondPoint}%, ${gradientThirdColor} ${gradientThirdPoint}%)`
 		$gradient.textContent = `background : radial-gradient(circle, ${gradientFirstColor} ${gradientFirstPoint}%, ${gradientSecondColor} ${gradientSecondPoint}%, ${gradientThirdColor} ${gradientThirdPoint}%)`
@@ -145,8 +147,15 @@ function transform(params) {
     let translateY = document.querySelector('.translateY').value
     let skewX = document.querySelector('.skewX').value
     let skewY = document.querySelector('.skewY').value
+
     $transform.textContent = `transform: scale(${scale}) rotate(${rotate}deg) translate(${translateX}px, ${translateY}px) skew(${skewX}deg, ${skewY}deg)`
     $box.style.transform =` scale(${scale}) rotate(${rotate}deg) translate(${translateX}px, ${translateY}px) skew(${skewX}deg, ${skewY}deg)`
 }
 
 
+function transition(params) {
+	let transitionTime = document.querySelector('.transitionTime').value
+
+	$hoverButton.style.transition = `${transitionTime}s`
+	$transition.textContent = `transition: ${transitionTime}s`
+}

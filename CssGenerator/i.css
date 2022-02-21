@@ -64,6 +64,111 @@ body {
 	padding: 0;
 }
 
+
+.tab-button {
+	width: 250px;
+	height: 50px;
+	background-color: white;
+	border-radius: 10px;
+	font-size: 30px;
+	font-weight: bold;
+	transition: .2s;
+	border: none;
+}
+.hoverButton{
+	display: flex;
+	align-items: center;
+	justify-content:center ;
+	margin-top: 25px;
+	height: 40px;
+	border: 1px steelblue solid;
+	font-size: 25px;
+	cursor: pointer;
+}
+.hoverButton:hover{
+background:steelblue ;
+}
+.tab-button:hover {
+	background-color: steelblue;
+	color: white;
+}
+
+.burgerMenu {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	visibility: hidden;
+	background-color: rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(20px);
+	z-index: 100000;
+	transition: .2s;
+	transform: translateX(-100%);
+	width: 100%;
+}
+
+.burgerAcitve {
+	visibility: visible;
+	transform: translateX(0%);
+}
+
+.burgerCont {
+	display: flex;
+	flex-flow: column;
+	background-color: white;
+	color: black;
+	height: 100%;
+	width: 325px;
+	background-color: rgb(252, 252, 252);
+}
+
+.btb {
+	background-color: steelblue;
+	color: white;
+}
+
+.tabButtons {
+	display: flex;
+	flex-flow: column;
+	align-self: center;
+	margin-top: 2rem;
+}
+
+select {
+	height: 20px;
+}
+
+input {
+	display: flex;
+	width: 100px;
+}
+
+.tab-button {
+	margin-top: 1rem;
+}
+
+.form {
+	padding-top: .3rem;
+}
+
+input {
+	margin-top: .5rem;
+}
+
+.tabs-item {
+	display: none;
+}
+
+.tabs {
+	display: flex;
+	flex-flow: column;
+}
+
+.active {
+	display: block;
+}
+
 input[type=range] {
 	-webkit-appearance: none;
 	margin: 18px 0;
@@ -160,99 +265,6 @@ input[type=range]:focus::-ms-fill-lower {
 input[type=range]:focus::-ms-fill-upper {
 	background: #367ebd;
 }
-
-.tab-button {
-	width: 250px;
-	height: 50px;
-	background-color: white;
-	border-radius: 10px;
-	font-size: 30px;
-	font-weight: bold;
-	transition: .2s;
-	border: none;
-}
-
-.tab-button:hover {
-	background-color: steelblue;
-	color: white;
-}
-
-.burgerMenu {
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	right: 0;
-	left: 0;
-	visibility: hidden;
-	background-color: rgba(0, 0, 0, 0.1);
-	backdrop-filter: blur(20px);
-	z-index: 100000;
-	transition: .2s;
-	transform: translateX(-100%);
-	width: 100%;
-}
-
-.burgerAcitve {
-	visibility: visible;
-	transform: translateX(0%);
-}
-
-.burgerCont {
-	display: flex;
-	flex-flow: column;
-	background-color: white;
-	color: black;
-	height: 100%;
-	width: 325px;
-	background-color: rgb(252, 252, 252);
-}
-
-.btb {
-	background-color: steelblue;
-	color: white;
-}
-
-.tabButtons {
-	display: flex;
-	flex-flow: column;
-	align-self: center;
-	margin-top: 2rem;
-}
-
-select {
-	height: 20px;
-}
-
-input {
-	display: flex;
-	width: 100px;
-}
-
-.tab-button {
-	margin-top: 1rem;
-}
-
-.form {
-	padding-top: .3rem;
-}
-
-input {
-	margin-top: .5rem;
-}
-
-.tabs-item {
-	display: none;
-}
-
-.tabs {
-	display: flex;
-	flex-flow: column;
-}
-
-.active {
-	display: block;
-}
-
 
 @media (max-width: 600px) {
 	.cssGenerator {
