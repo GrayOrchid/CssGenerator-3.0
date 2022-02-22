@@ -1,6 +1,7 @@
 body {
 	margin: 0;
 	padding: 0;
+	height: 100vh;
 }
 
 .cssGenerator {
@@ -65,7 +66,9 @@ select {
 
 
 /* BURGERMENU */
-
+.blockScrool{
+overflow: hidden;
+}
 .open {
 	position: absolute;
 	margin: .5rem;
@@ -116,11 +119,13 @@ select {
 	transition: .2s;
 	transform: translateX(-100%);
 	width: 100%;
+	overflow: hidden;
 }
 
 .burgerAcitve {
 	visibility: visible;
 	transform: translateX(0%);
+	overflow: hidden;
 }
 
 .burgerCont {

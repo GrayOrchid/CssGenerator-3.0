@@ -7,6 +7,7 @@ let open = document.querySelector('.open')
 let close = document.querySelector('.close')
 let burgerCont = document.querySelector('.burgerCont')
 let burgerMenu = document.querySelector('.burgerMenu')
+let $body = document.querySelector('body')
 
 // Результать 
 let $border = document.querySelector('.border')
@@ -19,7 +20,8 @@ let $transform = document.querySelector('.transform')
 let $transition = document.querySelector('.transition')
 let $hoverButton = document.querySelector('.hoverButton')
 let $bacdropFilter = document.querySelector('.backdrop-filter')
-let $cssGenerator = document.querySelector('.cssGenerator')
+
+
 // Тест бокс
 let $box = document.querySelector('.box')
 let $boxTest = document.querySelector('.boxTest')
@@ -29,15 +31,18 @@ let reset = document.querySelector('.reset')
 // Функции Бургер Меню 
 burgerMenu.addEventListener('click',()=>{
 	burgerMenu.classList.remove('burgerAcitve')
+	$body.classList.remove('blockScrool')
 })
 burgerCont.addEventListener('click',(e)=>{
 	e.stopPropagation();
 })
 open.addEventListener('click', ()=>{
 	burgerMenu.classList.add('burgerAcitve')
+	$body.classList.add('blockScrool')
 })
 close.addEventListener('click',()=>{
 	burgerMenu.classList.remove('burgerAcitve')
+	$body.classList.remove('blockScrool')
 })
 
 // Функция Табов
