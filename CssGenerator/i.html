@@ -22,7 +22,6 @@
                <button class="tab-button" data-tab="#tab5">Gradient</button>
                <button class="tab-button" data-tab="#tab6">Transform</button>
                <button class="tab-button" data-tab="#tab7">Transition</button>
-               <button class="tab-button" data-tab="#tab8">Effects   </button>
             </div>
          </div>
       </header>
@@ -31,7 +30,8 @@
       </div>
       <div class="cssGenerator">
          <div class="tabs">
-            <div class="tabs-item  active" id="tab1">
+            <!-- BORDER -->
+            <div class="tabs-item active " id="tab1">
                <div class="inputs">
                   <h1>Border</h1>
                   <div class="form"><input type="number" class="borderSize" min='0' max='50'oninput="border()"><span>Размер</span></div>
@@ -48,6 +48,7 @@
                   </div>
                </div>
             </div>
+            <!-- BORDER-RADIUS -->
             <div class="tabs-item  "id='tab2' >
                <div class="inputs">
                   <h1>Border radius</h1>
@@ -57,6 +58,7 @@
                   <div class="form"><input type="range" class="rbl" min='0' max='300' oninput="borderRadius()"><span>Нижний  правый</span></div>
                </div>
             </div>
+            <!-- TEXT-SHADOW -->
             <div class="tabs-item "id='tab3' >
                <div class="inputs">
                   <h1 class="TextShadow">Text Shadow</h1>
@@ -66,6 +68,7 @@
                   <div class="form"> <input type="color" oninput="textShadow()" class="ShadowTextColor"><span>Цвет</span></div>
                </div>
             </div>
+            <!-- BOX-SHADOW -->
             <div class="tabs-item "id='tab4' >
                <div class="inputs">
                   <h1>Box Shadow</h1>
@@ -82,6 +85,7 @@
                   </select>
                </div>
             </div>
+            <!-- GRADIENT -->
             <div class="tabs-item" id="tab5">
                <div class="inputs">
                   <h1>Gradient</h1>
@@ -100,6 +104,7 @@
                   </div>
                </div>
             </div>
+            <!-- TRANSFORM -->
             <div class="tabs-item" id="tab6">
                <div class="inputs">
                   <h1>Transform</h1>
@@ -111,6 +116,7 @@
                   <div class="form"> <input type="range" max="90" min="-90"  class="skewY" oninput="transform()"> <span>SkewX</span> </div>
                </div>
             </div>
+            <!-- TRANSITION -->
             <div class="tabs-item" id="tab7">
                <div class="inputs">
                   <h1>Transition</h1>
@@ -119,10 +125,11 @@
                </div>
             </div>
          </div>
+         <!-- BOX-TEST -->
          <div class="boxTest">
-            <div class="box">
-            </div>
+            <div class="box"></div>
          </div>
+         <!-- RESULTS -->
          <div class="result">
             <p class="width">width:</p>
             <p class="height">height:</p>

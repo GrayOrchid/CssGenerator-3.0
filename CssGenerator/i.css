@@ -1,3 +1,8 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
 .cssGenerator {
 	width: 100%;
 	display: flex;
@@ -6,18 +11,8 @@
 	align-items: center;
 }
 
-.open {
-	position: absolute;
-	margin: .5rem;
-}
 
-.boxTest {
-	width: 450px;
-	height: 450px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
+/* TABS-CHANGE */
 
 .tabs {
 	width: 300px;
@@ -26,11 +21,35 @@
 	align-items: center;
 }
 
+.tabs-item {
+	display: none;
+}
+
+.tabs {
+	display: flex;
+	flex-flow: column;
+}
+
+.active {
+	display: block;
+}
+
+
+/* TAB-CONTENT */
+
+.inputs {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+}
+
 .form {
+	width: 200px;
 	display: flex;
 	flex-flow: column;
 	align-items: center;
 	justify-content: center;
+	padding-top: .3rem;
 }
 
 .options {
@@ -40,30 +59,17 @@
 	justify-content: center;
 }
 
-.box {
-	width: 550px;
-	height: 550px;
-	background-color: steelblue;
+select {
+	height: 20px;
 }
 
-.result {
-	border: solid black 10px;
-	width: 400px;
-	font-size: 20px;
-	max-height: 1050px;
-}
 
-.boxTest {
-	width: 600px;
-	height: 600px;
-	margin-top: 2rem;
-}
+/* BURGERMENU */
 
-body {
-	margin: 0;
-	padding: 0;
+.open {
+	position: absolute;
+	margin: .5rem;
 }
-
 
 .tab-button {
 	width: 250px;
@@ -75,19 +81,23 @@ body {
 	transition: .2s;
 	border: none;
 }
-.hoverButton{
+
+.hoverButton {
 	display: flex;
 	align-items: center;
-	justify-content:center ;
+	justify-content: center;
 	margin-top: 25px;
 	height: 40px;
+	width: 200px;
 	border: 1px steelblue solid;
 	font-size: 25px;
 	cursor: pointer;
 }
-.hoverButton:hover{
-background:steelblue ;
+
+.hoverButton:hover {
+	background: steelblue;
 }
+
 .tab-button:hover {
 	background-color: steelblue;
 	color: white;
@@ -123,6 +133,10 @@ background:steelblue ;
 	background-color: rgb(252, 252, 252);
 }
 
+.tab-button {
+	margin-top: 1rem;
+}
+
 .btb {
 	background-color: steelblue;
 	color: white;
@@ -135,38 +149,42 @@ background:steelblue ;
 	margin-top: 2rem;
 }
 
-select {
-	height: 20px;
+
+/* BOX-TEST */
+
+.box {
+	width: 550px;
+	height: 550px;
+	background-color: steelblue;
+	position: absolute;
 }
+
+.boxTest {
+	width: 600px;
+	height: 600px;
+	margin-top: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.result {
+	border: solid black 10px;
+	width: 400px;
+	font-size: 20px;
+	max-height: 1050px;
+}
+
+
+/* INPUT */
 
 input {
 	display: flex;
 	width: 100px;
 }
 
-.tab-button {
-	margin-top: 1rem;
-}
-
-.form {
-	padding-top: .3rem;
-}
-
 input {
 	margin-top: .5rem;
-}
-
-.tabs-item {
-	display: none;
-}
-
-.tabs {
-	display: flex;
-	flex-flow: column;
-}
-
-.active {
-	display: block;
 }
 
 input[type=range] {

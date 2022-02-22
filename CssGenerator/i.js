@@ -18,9 +18,11 @@ let $shadowBox = document.querySelector('.shadowBox')
 let $transform = document.querySelector('.transform')
 let $transition = document.querySelector('.transition')
 let $hoverButton = document.querySelector('.hoverButton')
+let $bacdropFilter = document.querySelector('.backdrop-filter')
+let $cssGenerator = document.querySelector('.cssGenerator')
 // Тест бокс
 let $box = document.querySelector('.box')
-
+let $boxTest = document.querySelector('.boxTest')
 // Кнопка сбрасывание 
 let reset = document.querySelector('.reset')
 
@@ -134,10 +136,10 @@ function gradient(params) {
 
 	if (gradientType === 'radial') {
 		$box.style.background = `radial-gradient(circle, ${gradientFirstColor} ${gradientFirstPoint}%, ${gradientSecondColor} ${gradientSecondPoint}%, ${gradientThirdColor} ${gradientThirdPoint}%)`
-		$gradient.textContent = `background : radial-gradient(circle, ${gradientFirstColor} ${gradientFirstPoint}%, ${gradientSecondColor} ${gradientSecondPoint}%, ${gradientThirdColor} ${gradientThirdPoint}%)`
+		$gradient.textContent = `background: radial-gradient(circle, ${gradientFirstColor} ${gradientFirstPoint}%, ${gradientSecondColor} ${gradientSecondPoint}%, ${gradientThirdColor} ${gradientThirdPoint}%)`
 	} else {
 		$box.style.background = `linear-gradient(${gradientDeg}deg, ${gradientFirstColor} ${gradientFirstPoint}%, ${gradientSecondColor} ${gradientSecondPoint}%, ${gradientThirdColor} ${gradientThirdPoint}%)`
-		$gradient.textContent = `background : linear-gradient(${gradientDeg}deg, ${gradientFirstColor} ${gradientFirstPoint}%, ${gradientSecondColor} ${gradientSecondPoint}%, ${gradientThirdColor} ${gradientThirdPoint}%)`
+		$gradient.textContent = `background: linear-gradient(${gradientDeg}deg, ${gradientFirstColor} ${gradientFirstPoint}%, ${gradientSecondColor} ${gradientSecondPoint}%, ${gradientThirdColor} ${gradientThirdPoint}%)`
 	}
 }
 function transform(params) {
@@ -158,4 +160,12 @@ function transition(params) {
 
 	$hoverButton.style.transition = `${transitionTime}s`
 	$transition.textContent = `transition: ${transitionTime}s`
+}
+
+function backdropFilter(params) {
+	let blur = document.querySelector('.blur').value
+	let resulq = document.querySelector('.result')
+let BackdropFilter = documentq.querySelector('.BackdropFilter')
+BackdropFilter.style.backdropFilter = `blur(${blur}px)`
+
 }
