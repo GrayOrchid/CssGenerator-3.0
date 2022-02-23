@@ -9,12 +9,12 @@
    </head>
    <body>
       <header>
-         <div class="burgerMenu">
-         <div class="burgerCont">
+         <div class="burger-menu">
+         <div class="burger-cont">
             <div class="close">
                <img src="https://img.icons8.com/offices/1x/close-window.png" alt="">
             </div>
-            <div class="tabButtons">
+            <div class="tab-buttons">
                <button class="tab-button " data-tab="#tab1">Border</button>
                <button class="tab-button " data-tab="#tab2">Border radius</button>
                <button class="tab-button" data-tab="#tab3">Text Shadow</button>
@@ -28,16 +28,16 @@
       <div class="open">
          <img src="https://img.icons8.com/ios-filled/.5x/menu.png" alt="">
       </div>
-      <div class="cssGenerator">
+      <div class="css-generator">
          <div class="tabs">
             <!-- BORDER -->
             <div class="tabs-item active " id="tab1">
                <div class="inputs">
                   <h1>Border</h1>
-                  <div class="form"><input type="number" class="borderSize" min='0' max='50'oninput="border()"><span>Размер</span></div>
-                  <div class="form"><input type="color" value="black" class="colorBorder" oninput="border()"> <span>Цвет</span></div>
+                  <div class="form"><input type="number" class="border-size" min='0' max='50'oninput="border()"><span>Размер</span></div>
+                  <div class="form"><input type="color" value="black" class="color-border" oninput="border()"> <span>Цвет</span></div>
                   <div class="options">
-                     <select class="borderType"  >
+                     <select class="border-type"  >
                         <option value="" disabled>Тип</option>
                         <option value="solid" >solid</option>
                         <option value="dashed"  >dashed  </option>
@@ -61,24 +61,24 @@
             <!-- TEXT-SHADOW -->
             <div class="tabs-item "id='tab3' >
                <div class="inputs">
-                  <h1 class="TextShadow">Text Shadow</h1>
-                  <div class="form"><input type="range" oninput="textShadow()" max="300" min='-300' class="ShadowTextX"><span>Ось X</span></div>
-                  <div class="form"><input type="range" oninput="textShadow()" max="300" min='-300' class="ShadowTextY"><span>Ось Y</span></div>
-                  <div class="form"><input type="range" oninput="textShadow()" max="100" class="ShadowTextBlur"><span>Размытие</span></div>
-                  <div class="form"> <input type="color" oninput="textShadow()" class="ShadowTextColor"><span>Цвет</span></div>
+                  <h1 class="text-shadow">Text Shadow</h1>
+                  <div class="form"><input type="range" oninput="textShadow()" max="300" min='-300' class="shadow-text-X"><span>Ось X</span></div>
+                  <div class="form"><input type="range" oninput="textShadow()" max="300" min='-300' class="shadow-text-Y"><span>Ось Y</span></div>
+                  <div class="form"><input type="range" oninput="textShadow()" max="100" class="shadow-text-blur"><span>Размытие</span></div>
+                  <div class="form"> <input type="color" oninput="textShadow()" class="shadow-text-color"><span>Цвет</span></div>
                </div>
             </div>
             <!-- BOX-SHADOW -->
             <div class="tabs-item "id='tab4' >
                <div class="inputs">
                   <h1>Box Shadow</h1>
-                  <div class="form"><input type="range" oninput="boxShadow()" max="100" min='-100' class="ShadowBoxX"><span>Ось X</span></div>
-                  <div class="form"><input type="range" oninput="boxShadow()" max="100" min='-100' class="ShadowBoxY"><span>Ось Y</span></div>
-                  <div class="form"><input type="range" oninput="boxShadow()" max="100" class="ShadowBoxBlur"><span>Размытие</span></div>
-                  <div class="form"> <input type="color" oninput="boxShadow()" class="ShadowBoxColor"><span>Цвет</span></div>
+                  <div class="form"><input type="range" oninput="boxShadow()" max="100" min='-100' class="shadow-box-X"><span>Ось X</span></div>
+                  <div class="form"><input type="range" oninput="boxShadow()" max="100" min='-100' class="shadow-box-Y"><span>Ось Y</span></div>
+                  <div class="form"><input type="range" oninput="boxShadow()" max="100" class="shadow-box-blur"><span>Размытие</span></div>
+                  <div class="form"> <input type="color" oninput="boxShadow()" class="shadow-box-color"><span>Цвет</span></div>
                </div>
                <div class="options">
-                  <select class="boxShadowType" >
+                  <select class="box-shadow-type" >
                      <option disabled>Тип</option>
                      <option value="">outside</option>
                      <option value="inset">inset</option>
@@ -89,15 +89,15 @@
             <div class="tabs-item" id="tab5">
                <div class="inputs">
                   <h1>Gradient</h1>
-                  <div class="form"> <input type="range" class="gradientDeg" value="45d" max="360" min="0" oninput="gradient()"> <span>Угол</span> </div>
-                  <div class="form"> <input type="color" class="gradientFirstColor" value="#a1ffce" oninput="gradient()" > <span>Первый цвет</span> </div>
-                  <div class="form"> <input type="range" class="gradientFirstPoint" value="12" max="100" min="0" oninput="gradient()"> <span>Первая точка</span> </div>
-                  <div class="form"> <input type="color" class="gradientSecondColor" value="#a8edea" oninput="gradient()"> <span>Второй цвет</span> </div>
-                  <div class="form"> <input type="range" class="gradientSecondPoint" value="56"max="100" min="0" oninput="gradient()"> <span>Вторая точка</span> </div>
-                  <div class="form"> <input type="color" class="gradientThirdColor" value="#fed6e3" oninput="gradient()"> <span>Третий  цвет</span> </div>
-                  <div class="form"> <input type="range" class="gradientThirdPoint" value="100"max="100" min="0" oninput="gradient()"> <span>Третья точка</span> </div>
+                  <div class="form"> <input type="range" class="gradient-deg" value="45d" max="360" min="0" oninput="gradient()"> <span>Угол</span> </div>
+                  <div class="form"> <input type="color" class="gradient-first-color" value="#a1ffce" oninput="gradient()" > <span>Первый цвет</span> </div>
+                  <div class="form"> <input type="range" class="gradient-first-point" value="12" max="100" min="0" oninput="gradient()"> <span>Первая точка</span> </div>
+                  <div class="form"> <input type="color" class="gradient-second-color" value="#a8edea" oninput="gradient()"> <span>Второй цвет</span> </div>
+                  <div class="form"> <input type="range" class="gradient-second-point" value="56"max="100" min="0" oninput="gradient()"> <span>Вторая точка</span> </div>
+                  <div class="form"> <input type="color" class="gradient-third-color" value="#fed6e3" oninput="gradient()"> <span>Третий  цвет</span> </div>
+                  <div class="form"> <input type="range" class="gradient-third-point" value="100"max="100" min="0" oninput="gradient()"> <span>Третья точка</span> </div>
                   <div class="options">
-                     <select name="" class="gradientType" id="">
+                     <select name="" class="gradient-type" id="">
                         <option value="linear">linear</option>
                         <option value="radial">radial</option>
                      </select>
@@ -110,33 +110,31 @@
                   <h1>Transform</h1>
                   <div class="form"> <input type="range" max="10" min="0" class="scale" oninput="transform()"> <span >Scale</span> </div>
                   <div class="form"> <input type="range" max="360" min="0" class="rotate" oninput="transform()"> <span>Rotate</span> </div>
-                  <div class="form"> <input type="range" max="50" min="-50" class="translateX" oninput="transform()"> <span>TranslateX</span> </div>
-                  <div class="form"> <input type="range" max="50" min="-50" class="translateY" oninput="transform()"> <span>TranslateY</span> </div>
-                  <div class="form"> <input type="range" max="90" min="-90"  class="skewX" oninput="transform()"> <span>SkewY</span> </div>
-                  <div class="form"> <input type="range" max="90" min="-90"  class="skewY" oninput="transform()"> <span>SkewX</span> </div>
+                  <div class="form"> <input type="range" max="50" min="-50" class="translate-X" oninput="transform()"> <span>TranslateX</span> </div>
+                  <div class="form"> <input type="range" max="50" min="-50" class="translate-Y" oninput="transform()"> <span>TranslateY</span> </div>
+                  <div class="form"> <input type="range" max="90" min="-90"  class="skew-X" oninput="transform()"> <span>SkewY</span> </div>
+                  <div class="form"> <input type="range" max="90" min="-90"  class="skew-Y" oninput="transform()"> <span>SkewX</span> </div>
                </div>
             </div>
             <!-- TRANSITION -->
             <div class="tabs-item" id="tab7">
                <div class="inputs">
                   <h1>Transition</h1>
-                  <div class="form"> <input type="number"  class="transitionTime" oninput="transition()"> <span >transition</span> </div>
-                  <div class="hoverButton">Hover Me</div>
+                  <div class="form"> <input type="number"  class="transition-time" oninput="transition()"> <span >transition</span> </div>
+                  <div class="hover-button">Hover Me</div>
                </div>
             </div>
          </div>
          <!-- BOX-TEST -->
-         <div class="boxTest">
+         <div class="box-test">
             <div class="box"></div>
          </div>
          <!-- RESULTS -->
          <div class="result">
-            <p class="width">width:</p>
-            <p class="height">height:</p>
             <p class="border">border:</p>
-            <p class="borderRadius">border-radius:</p>
-            <p class="shadowText">text-shadow:</p>
-            <p class="shadowBox">box-shadow:</p>
+            <p class="border-radius">border-radius:</p>
+            <p class="shadow-text">text-shadow:</p>
+            <p class="shadow-box">box-shadow:</p>
             <p class="gradient">gradient:</p>
             <p class="transform">transform:</p>
             <p class="transition">transition:</p>
